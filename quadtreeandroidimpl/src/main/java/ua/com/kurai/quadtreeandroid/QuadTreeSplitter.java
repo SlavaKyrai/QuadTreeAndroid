@@ -67,6 +67,7 @@ public class QuadTreeSplitter extends Thread {
     }
 
 
+
     @Override
     public void run() {
         try {
