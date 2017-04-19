@@ -23,26 +23,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().setTitle("QuadTree");
 
         QuadTreeImageView imageView = (QuadTreeImageView) findViewById(R.id.qtImgView);
         imageView.setDrawGreed(true);
 
         Bitmap mutableBitmap;
         BitmapFactory.Options options = new BitmapFactory.Options();
-        final Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.testcolor, options);
+        final Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.peach, options);
         mutableBitmap = bm.copy(Bitmap.Config.ARGB_8888, true);
         imageView.setImageBitmap(mutableBitmap);
 
-        QuadTreeSplitter initialGrid = new QuadTreeSplitter(mutableBitmap, new OnQuadTreeSplitComplete() {
+        QuadTreeSplitter quadTreeSplitter = new QuadTreeSplitter(mutableBitmap, new OnQuadTreeSplitComplete() {
             @Override
             public void onSplitComplete(List<QuadTreeRect> quadTreeRects) {
                 Log.d(TAG, "onSplitComplete: " + quadTreeRects.size());
             }
         });
-        initialGrid.setMinQuadAreaSize(100);
-        initialGrid.setMinColorDistance(10);
-        initialGrid.setOnQuadDrawListener(imageView);
-        initialGrid.start();
+        quadTreeSplitter.setMinQuadAreaSize(50);
+        quadTreeSplitter.setMinColorDistance(5);
+        quadTreeSplitter.setOnQuadDrawListener(imageView);
+        quadTreeSplitter.start();
 
     }
 }
