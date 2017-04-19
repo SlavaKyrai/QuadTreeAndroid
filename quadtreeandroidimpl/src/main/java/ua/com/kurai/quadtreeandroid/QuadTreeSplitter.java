@@ -70,11 +70,6 @@ public class QuadTreeSplitter extends Thread {
 
     @Override
     public void run() {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         QuadTreeRect quadTreeRect = new QuadTreeRect(new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight()));
         // create first 4 childs and add it to work array
         createTreeChilds(quadTreeRect);
