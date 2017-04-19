@@ -3,7 +3,7 @@
 ![alt tag](http://i.imgur.com/9fz1O2O.gif)
 ![alt tag](http://i.imgur.com/r1wfHfE.gif)
 
-Library that helps to implement the quadrant tree in android, for example, splitting images.
+Library that helps to implement the QuadTree in android, for example, splitting images.
 
 ### Download
 
