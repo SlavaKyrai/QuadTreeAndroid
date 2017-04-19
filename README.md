@@ -24,7 +24,7 @@ or Maven:
 ### Usage
 
 Create an instance of the QuadSplitter class. In the class constructor, pass the bitmap and OnQuadTreeSplitComplete callback.
-Result - list of QuadTreeRect will be returned in onSplitComplete in another thread. To start the work, use the methos - start.
+Result - list of QuadTreeRect will be returned in onSplitComplete in another thread. To start the work, use the method - start.
 ```java
 QuadTreeSplitter quadTreeSplitter = new QuadTreeSplitter(mutableBitmap, new OnQuadTreeSplitComplete() {
     @Override
