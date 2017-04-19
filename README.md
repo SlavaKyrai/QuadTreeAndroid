@@ -9,14 +9,15 @@ Library that helps to implement the quadrant tree in android, for example, split
 
 Download via Gradle:
 
-gradle
+```gradle
 compile 'com.github.slavakyrai:quadtreeandroidimpl:0.1.0'
-
+```
 or Maven:
-
+```xml
 <dependency>
   <groupId>com.github.slavakyrai</groupId>
   <artifactId>quadtreeandroidimpl</artifactId>
   <version>0.1.0</version>
   <type>pom</type>
 </dependency>
+```
