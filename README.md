@@ -45,7 +45,7 @@ imageView.setImageBitmap(mutableBitmap);
 quadTreeSplitter.setOnQuadDrawListener(imageView);
 imageView.setDrawGreed(true);
 ```
-Look [Sample projects] [sample] for more information
+Look [sample] for more information
 
 ### License 
 
