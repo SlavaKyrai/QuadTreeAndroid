@@ -3,7 +3,7 @@
 ![alt tag](http://i.imgur.com/9fz1O2O.gif)
 ![alt tag](http://i.imgur.com/r1wfHfE.gif)
 
-Library that helps to implement the QuadTree in android, for example, splitting images.
+Library that helps to implement the QuadTree in android, by using splitting images
 
 ### Download
 
@@ -23,8 +23,7 @@ or Maven:
 ```
 ### Usage
 
-Create an instance of the QuadSplitter class. In the class constructor, pass the bitmap and OnQuadTreeSplitComplete callback.
-Result - list of QuadTreeRect will be returned in onSplitComplete in another thread. To start the work, use the method - start.
+Create an instance of the QuadSplitter class. Pass the bitmap and OnQuadTreeSplitComplete callback  in the constructor. The result will be returned as list of QuadTreeRect, in another thread in onSplitComplete().Use the method start() to start splitting image.
 ```java
 QuadTreeSplitter quadTreeSplitter = new QuadTreeSplitter(mutableBitmap, new OnQuadTreeSplitComplete() {
     @Override
@@ -34,18 +33,20 @@ QuadTreeSplitter quadTreeSplitter = new QuadTreeSplitter(mutableBitmap, new OnQu
     });
 quadTreeSplitter.start();
 ```
-You can customize the work of the QuadSplitter class by using the setMinQuadAreaSize() and setMinColorDistance() methods.
+You can customize the work of the QuadSplitter class by using methods setMinQuadAreaSize() and setMinColorDistance().
 ```java
 quadTreeSplitter.setMinQuadAreaSize(50);
 quadTreeSplitter.setMinColorDistance(5);
 ```
-If you want to display the process of dividing squares, use the QuadTreeImageView class, which is extended by the ImageView. In doing so, you must use the setImageBitmap() method, the QuadTreeImageView class, and the setOnQuadDrawListener() method of the QuadTreeSplitter class. Using the imageView.setDrawGreed () method, you can enable or disable the drawing of rectangle borders
+If you want to display the separeting image process, use the QuadTreeImageView class, which is extended by the ImageView. For than you must use the next methods: setImageBitmap() method of the QuadTreeImageView class, and setOnQuadDrawListener() method of the QuadTreeSplitter class. You can enable or disable the outlines of the rectangles borders, when you use the setDrawGreed() method.
 ```java
 QuadTreeImageView imageView = (QuadTreeImageView) findViewById(R.id.qtImgView);
 imageView.setImageBitmap(mutableBitmap);
 quadTreeSplitter.setOnQuadDrawListener(imageView);
 imageView.setDrawGreed(true);
 ```
+Look [Sample projects] [sample] for more information
+
 ### License 
 
 Licensed under the Apache License, Version 2.0 (the "License");
