@@ -29,17 +29,19 @@ public class QuadTreeSplitter extends Thread {
         pixelsBitmap = getPixelsFromBitmap(bitmap);
     }
 
+
     /**
-     * The smaller the rectangle, the better the output image, but longer splitting.
-     * recommended value about 100
+     * The smaller color distance, the better the output image, but longer splitting.
+     * recommended value about 5-10
      */
     public void setMinColorDistance(@IntRange(from = 1, to = Integer.MAX_VALUE) int minColorDistance) {
         this.minColorDistance = minColorDistance;
     }
 
+
     /**
-     * The smaller color distance, the better the output image, but longer splitting.
-     * recommended value about 5-10
+     * The smaller the rectangle, the better the output image, but longer splitting.
+     * recommended value about 100
      */
     public void setMinQuadAreaSize(@IntRange(from = 1, to = Integer.MAX_VALUE) int minQuadAreaSize) {
         this.minQuadAreaSize = minQuadAreaSize;

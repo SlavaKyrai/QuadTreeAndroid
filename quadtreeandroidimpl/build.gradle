@@ -23,7 +23,7 @@ android {
 }
 
 publish {
-    groupId = 'com.github.SlavaKyrai'
+    groupId = 'com.github.slavakyrai'
     artifactId = 'quadtreeandroidimpl'
     publishVersion = '0.1.0'
     desc = 'Library that shows implementation of quad tree in android.'
