@@ -160,7 +160,7 @@ public class QuadTreeSplitter extends Thread {
     private void findLargestColorDist() {
         QuadTreeRect largestQuad = quadsInWorkList.get(0);
 
-        for (int i = 0; i < quadsInWorkList.size(); i++) {
+        for (int i = 1; i < quadsInWorkList.size(); i++) {
             if (quadsInWorkList.get(i).getColorDistance() >= largestQuad.getColorDistance()) {
                 largestQuad = quadsInWorkList.get(i);
             }
