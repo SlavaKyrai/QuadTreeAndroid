@@ -10,7 +10,7 @@ Library that helps to implement the QuadTree in android, by using splitting imag
 Download via Gradle:
 
 ```gradle
-compile 'com.github.slavakyrai:quadtreeandroidimpl:0.1.0'
+compile 'com.github.slavakyrai:quadtreeandroidimpl:0.1.1'
 ```
 or Maven:
 ```xml
